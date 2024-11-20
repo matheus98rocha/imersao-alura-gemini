@@ -1,0 +1,33 @@
+{
+  "name": "imersao-alura-gemini",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matheus98rocha/imersao-alura-gemini"
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "Matheus Gonçalves Rocha",
+    "email": "matheus98rocha@gmail.com",
+    "url": "https://www.linkedin.com/in/matheus-rocha-79185b169/"
+  },
+  "contributors": [],
+  "scripts": {
+    "dev": "node server.js",
+    "test": ""
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
