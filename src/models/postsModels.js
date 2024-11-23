@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import connectToDatabase from "../config/db.js";
 
 let cachedConnection = null;
@@ -24,4 +25,10 @@ export async function getAllPosts() {
 export async function createNewPost(post) {
   const connection = await dbInstance("posts");
   return connection.insertOne(post);
+}
+
+export async function updateNewPost(id, post) {
+  const connection = await dbInstance("posts");
+  const objectId = ObjectId.createFromHexString(id);
+  return connection.updateOne({ _id: objectId }, { $set: post });
 }

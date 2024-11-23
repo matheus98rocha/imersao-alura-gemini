@@ -2,6 +2,7 @@ import express from "express";
 import {
   getAllPostsController,
   postNewPost,
+  updateNewPostController,
   uploadImage,
 } from "../controllers/postsController.js";
 import multer from "multer";
@@ -25,6 +26,8 @@ const routes = (app) => {
   app.post("/posts", postNewPost);
 
   app.post("/posts/upload", upload.single("image"), uploadImage);
+
+  app.put("/posts/upload/:id", updateNewPostController);
 };
 
 export default routes;

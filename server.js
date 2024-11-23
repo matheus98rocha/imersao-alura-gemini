@@ -5,6 +5,8 @@ const app = express();
 
 routes(app);
 
+app.use(express.static("uploads"));
+
 app.listen(3000, () => {
   console.log("Server is up");
 });
